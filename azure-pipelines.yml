@@ -44,7 +44,7 @@ steps:
     azureSubscription: 'Azure subscription 1(8d4e463b-c3e4-4604-9d08-45ec5ab33ec8)'
     appType: 'webAppLinux'
     WebAppName: 'javawebapp'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    packageForLinux: '$(System.DefaultWorkingDirectory)//home/vsts/work/1/a/drop/'
     RuntimeStack: 'JAVA|11-java11'
     DeploymentTypeLinux: 'zipDeploy'
   
