@@ -38,7 +38,7 @@ steps:
     buildType: 'current'
     downloadType: 'single'
     downloadPath: '$(System.ArtifactsDirectory)'
-- task: AzureRmWebAppDeployment@2
+- task: AzureRmWebAppDeployment@4
   inputs:
     ConnectedServiceName: 'Azure subscription 1(8d4e463b-c3e4-4604-9d08-45ec5ab33ec8)'
     WebAppName: 'javawebapp'
