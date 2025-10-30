@@ -38,11 +38,13 @@ steps:
     buildType: 'current'
     downloadType: 'single'
     downloadPath: '$(System.ArtifactsDirectory)'
-- task: AzureRmWebAppDeployment@4
+- task: AzureRmWebAppDeployment@5
   inputs:
     ConnectionType: 'AzureRM'
     azureSubscription: 'Azure subscription 1(8d4e463b-c3e4-4604-9d08-45ec5ab33ec8)'
     appType: 'webAppLinux'
     WebAppName: 'javawebapp'
-    packageForLinux: '$(System.DefaultWorkingDirectory)'
-    RuntimeStack: 'java'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    RuntimeStack: 'JAVA|11-java11'
+    DeploymentTypeLinux: 'zipDeploy'
+  
